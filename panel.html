@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel</title>
+</head>
+<body>
+<script src="/bundle.js"></script>
+
+<section class="container">
+
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/widgets.html">Widgets</a>
+    <a href="/panel.html">Panel</a>
+  </nav>
+
+  <div class="widget">
+
+    <div class="widget__header">
+      <h3 class="widget__title">Panel title</h3>
+    </div>
+
+    <div class="widget__content">
+      <p class="widget__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat porro molestias
+        voluptatum, dolor cupiditate ipsa, fuga aspernatur sequi molestiae provident deleniti cum facilis. Doloremque
+        expedita voluptate similique, repudiandae nobis corrupti!</p>
+    </div>
+
+    <div class="widget__footer">
+      <a href="" class="widget__link">Read more</a>
+    </div>
+  </div>
+
+  <div class="widget widget--outline">
+    <div class="widget__header">
+      <h3 class="widget__title">Panel title</h3>
+    </div>
+
+    <div class="widget__content">
+      <p class="widget__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat porro molestias
+        voluptatum, dolor cupiditate ipsa, fuga aspernatur sequi molestiae provident deleniti cum facilis. Doloremque
+        expedita voluptate similique, repudiandae nobis corrupti!</p>
+    </div>
+
+    <div class="widget__footer">
+      <a href="" class="widget__link">Read more</a>
+    </div>
+  </div>
+
+  <div class="widget widget--promo">
+    <div class="widget__header">
+      <h3 class="widget__title">Panel title</h3>
+    </div>
+
+    <div class="widget__content">
+      <p class="widget__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat porro molestias
+        voluptatum, dolor cupiditate ipsa, fuga aspernatur sequi molestiae provident deleniti cum facilis. Doloremque
+        expedita voluptate similique, repudiandae nobis corrupti!</p>
+    </div>
+
+    <div class="widget__footer">
+      <a href="" class="widget__link">Read more</a>
+    </div>
+  </div>
+
+  <pre>
+    <h3>panel.html</h3>
+&lt;div class=&quot;widget widget--outline&quot;&gt;
+  &lt;div class=&quot;widget__header&quot;&gt;
+    &lt;h3 class=&quot;widget__title&quot;&gt;Panel title&lt;/h3&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;widget__content&quot;&gt;
+    &lt;p class=&quot;widget__text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat porro molestias
+      voluptatum, dolor cupiditate ipsa, fuga aspernatur sequi molestiae provident deleniti cum facilis. Doloremque
+      expedita voluptate similique, repudiandae nobis corrupti!&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;widget__footer&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;widget__link&quot;&gt;Read more&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </pre>
+
+  <pre>
+    <h3>panel.scss</h3>
+.widget {
+  $parent: &; // keep track of the "grandparent"
+  background: #ccc;
+  float: left;
+  margin: 15px;
+  width: 250px;
+
+  &__header,
+  &__content,
+  &__footer {
+    padding: 10px 15px;
+  }
+
+  &__title {
+    color: #333;
+    margin-bottom: 0;
+
+    // modifiers
+    #{$parent}--outline & {
+      color: #337ab7;
+    }
+
+    #{$parent}--promo & {
+      color: white;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__link {
+    #{$parent}--promo & {
+      color: white;
+    }
+  }
+
+  // modifiers
+  &--outline {
+    background: white;
+    border: 1px solid #ccc;
+  }
+
+  &--promo {
+    background: tomato;
+    color: white;
+  }
+}
+  </pre>
+</section>
+
+</body>
+</html>

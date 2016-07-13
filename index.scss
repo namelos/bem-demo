@@ -1,20 +1,78 @@
-body {
-  background: #eee
+$blockColor: #76b24f;
+$elementColor: #4f91b2;
+$modifierColor: #d5635d;
+
+// introduction block
+.introduction {
+  padding-top: 30px;
 }
 
-.github-button {
-  display: inline-block;
-  border-radius: 3px;
-  padding: 7px 12px;
-  border: 1px solid #D5D5D5;
-  background-image: linear-gradient(#EEE, #DDD);
-  font: 700 13px/18px Helvetica, arial;
+.introduction__cell--block {
+  h3 {
+    color: $blockColor
+  }
 }
-.github-button--state-success {
-  color: #FFF;
-  background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
-  border-color: #4A993E;
+
+.introduction__cell--element {
+  h3 {
+    color: $elementColor
+  }
 }
-.github-button--state-danger {
-  color: #900;
+
+.introduction__cell--modifier {
+  h3 {
+    color: $modifierColor
+  }
+}
+
+
+// general
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.row .column {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  background: #f0f0f0;
+  color: #606c76;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 1.0em;
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 1.6;
+}
+
+pre, code {
+  white-space: pre-wrap;
+  font-family: Menlo,Consolas,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,monospace;
+  background: #fafafa
+}
+
+pre {
+  border-left: .3rem solid #888;
+  font-size: 13px;
+  padding: 5px 10px;
+  float: left;
+  width: 100%
+}
+
+a {
+  text-decoration: none;
 }

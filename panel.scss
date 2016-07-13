@@ -1,0 +1,48 @@
+.widget {
+  $parent: &; // keep track of the "grandparent"
+  background: #ccc;
+  float: left;
+  margin: 15px;
+  width: 250px;
+
+  &__header,
+  &__content,
+  &__footer {
+    padding: 10px 15px;
+  }
+
+  &__title {
+    color: #333;
+    margin-bottom: 0;
+
+    // modifiers
+    #{$parent}--outline & {
+      color: #337ab7;
+    }
+
+    #{$parent}--promo & {
+      color: white;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__link {
+    #{$parent}--promo & {
+      color: white;
+    }
+  }
+
+  // modifiers
+  &--outline {
+    background: white;
+    border: 1px solid #ccc;
+  }
+
+  &--promo {
+    background: tomato;
+    color: white;
+  }
+}

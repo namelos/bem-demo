@@ -1,3 +1,4 @@
-require('./node_modules/github-markdown-css/github-markdown.css')
-require('./widgets.scss')
 require('./index.scss')
+require('./widgets.scss')
+require('./panel.scss')
+require('./github-button.scss')

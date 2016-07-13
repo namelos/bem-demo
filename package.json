@@ -1,13 +1,13 @@
 {
-  "name": "bem",
+  "name": "bem-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "some simple show-cases for bem",
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "namelos",
+  "license": "MIT",
   "devDependencies": {
     "css-loader": "^0.23.1",
     "node-sass": "^3.8.0",
@@ -17,6 +17,5 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "github-markdown-css": "^2.3.0"
   }
 }

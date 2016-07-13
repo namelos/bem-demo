@@ -6,14 +6,112 @@
 </head>
 <script src="/bundle.js"></script>
 <body>
-<button class="github-button">
+
+<section class="container">
+
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/widgets.html">Widgets</a>
+    <a href="/panel.html">Panel</a>
+  </nav>
+
+  <h2>Blocks, Elements and Modifiers</h2>
+
+  <p>You will not be surprised, that BEM is abbreviation of the key elements of the methodology — Block, Element and
+    Modifier. Strict rules of naming can be found in <a href="/naming">Naming</a> article.</p>
+
+  <div class="row">
+    <div class="component">
+      <div class="introduction__cell introduction__cell--block">
+        <h3>Block</h3>
+        <p>Standalone entity that is meaningful on its own.</p>
+
+        <h5>Examples</h5>
+        <code>header</code>, <code>container</code>, <code>menu</code>, <code>checkbox</code>, <code>input</code>
+      </div>
+    </div>
+    <div class="component">
+      <div class="introduction__cell introduction__cell--element">
+        <h3>Element</h3>
+        <p>Parts of a block and have no standalone meaning. They are semantically tied to its block.</p>
+
+        <h5>Examples</h5>
+        <code>menu item</code>, <code>list item</code>, <code>checkbox caption</code>, <code>header title</code>
+      </div>
+    </div>
+    <div class="component">
+      <div class="introduction__cell introduction__cell--modifier">
+        <h3>Modifier</h3>
+        <p>Flags on blocks or elements. Use them to change appearance or behavior.</p>
+
+        <h5>Examples</h5>
+        <code>disabled</code>, <code>highlighted</code>, <code>checked</code>, <code>fixed</code>, <code>size big</code>,
+        <code>color yellow</code>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center; padding-top: 10px; padding-bottom: 40px;">
+
+    <img src="/github.jpg" style="width: 100%; max-width: 930px;">
+  </div>
+  <h2>Under the hood</h2>
+
+  <p>Lets look how one particular element on page can be implemented in BEM. We will take <code>button</code> from <a
+      href="http://primercss.io/buttons/">GitHub</a>:</p>
+
+  <button class="github-button">
+    Normal button
+  </button>
+  <button class="github-button github-button--state-success">
+    Success button
+  </button>
+  <button class="github-button github-button--state-danger">
+    Danger button
+  </button>
+
+  <p>We can have normal button for usual cases, and two more states for different ones. Because of BEM style blocks by
+    class selectors, we can implement blocks with any tags we want (<code>button</code>, <code>a</code> or even <code>div</code>).
+    Naming invites us to use <code>block--modifier--value</code> syntax.</p>
+
+  <div class="row">
+    <div class="column">
+      <div class="introduction__cell">
+        <h4>HTML</h4>
+        <pre>
+&lt;button class=&quot;button&quot;&gt;
   Normal button
-</button>
-<button class="github-button github-button--state-success">
+&lt;/button&gt;
+&lt;button class=&quot;button button--state-success&quot;&gt;
   Success button
-</button>
-<button class="github-button github-button--state-danger">
+&lt;/button&gt;
+&lt;button class=&quot;button button--state-danger&quot;&gt;
   Danger button
-</button>
+&lt;/button&gt;</pre>
+      </div>
+    </div>
+    <div class="column">
+      <div class="introduction__cell">
+        <h4>CSS</h4>
+        <pre>
+.button {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 7px 12px;
+  border: 1px solid #D5D5D5;
+  background-image: linear-gradient(#EEE, #DDD);
+  font: 700 13px/18px Helvetica, arial;
+}
+.button--state-success {
+  color: #FFF;
+  background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+  border-color: #4A993E;
+}
+.button--state-danger {
+  color: #900;
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>

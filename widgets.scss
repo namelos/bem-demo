@@ -1,7 +1,7 @@
 $gray: #888;
 
 .container {
-  max-width: 25rem;
+  max-width: 40rem;
   margin: 2rem auto;
 }
 
@@ -10,8 +10,8 @@ $gray: #888;
 }
 
 .component {
-  padding: 1rem 1.6rem;
-  margin: 2rem 0;
+  padding: 1.5rem 1.6rem;
+  margin: 1rem 0;
   background: #fff;
   box-shadow: 0 1px 1px rgba(0,0,0,.2);
   border-left: 4px solid $gray;
