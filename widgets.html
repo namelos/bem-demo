@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards</title>
+</head>
+<body>
+<script src="/bundle.js"></script>
+<section class="container">
+  <article class="components">
+    <h2>Components</h2>
+    <div class="component">
+      <h3>.button</h3>
+        <a class="button" tabindex="0">
+          <span class="button__text" tabindex="0">
+            Button Text</span>
+        </a>
+        <br>
+        <br>
+    </div>
+    <div class="component">
+      <h3>.list</h3>
+      <ul class="list" tabindex="0">
+        <li class="list__item" tabindex="0">
+          List Item 1
+        </li>
+        <li class="list__item" tabindex="0">
+          List Item 2
+        </li>
+        <li class="list__item" tabindex="0">
+          List Item 3
+        </li>
+      </ul>
+    </div>
+  </article>
+  <div class="component component--no-bg">
+    <h3>.card</h3>
+    <div class="card" tabindex="0">
+      <div class="card__header" tabindex="0">
+        <div class="card__title" tabindex="0">
+          Title
+        </div>
+      </div>
+      <div class="card__content" tabindex="0">
+        <p>Content hia whatever 8-bit pork belly. YOLO mlkshk everyday carry, 3 wolf moon cred keffiyeh green.</p>
+        <p>Juice banjo vegan intelligentsia 8-bit cronut humblebrag readymade.</p>
+      </div>
+    </div>
+  </div>
+  <div class="component component--no-bg">
+    <h3>Real use case: Combined .card with .list and .button</h3>
+    <article class="card" tabindex="0">
+      <div class="card__header" tabindex="0">
+        <h2 class="card__title" tabindex="0">
+          B is for Block: How to BEM
+        </h2>
+      </div>
+      <div class="card__content" tabindex="0">
+        <ol class="list card__list" tabindex="0">
+          <li class="list__item" tabindex="0">
+            Describe the Main Block with a word or two.
+          </li>
+          <li class="list__item" tabindex="0">
+            Describe the __element with a word or two.
+          </li>
+          <li class="list__item" tabindex="0">
+            Add --modifiers if necessary.
+          </li>
+        </ol>
+        <a class="button button--with-icon card__button" tabindex="0">
+          <span class="button__text" tabindex="0">
+            Read More
+          </span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+</body>
+</html>
